@@ -1,6 +1,6 @@
 ---
-title: Test
+title: Declare set in bash
 tags:
-  - Testing
+  - bash
 ---
-Just a testing post.
+Coming soon.
