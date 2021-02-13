@@ -8,6 +8,8 @@ tags:
 ### 前言
 相信大部前端工程師都和我一下，在一開始踏入後端領域會先從 Nodejs 開始。一來是學習成本小很多，二來是現在網路上能找到關於 Nodejs 的教學資源真的很多，例如大家可能非常熟悉的 **MEAN**  stack (MongoDB, Express, Angular, Nodejs) 或是 **MERN** stack (Angular 換成 React)。可是大部分的學習資源還是會以基礎為主，畢竟這對初學者而言會比較容易吸收，那在這些基礎概念都掌握之後，如果想學習更進階的概念或是系統性的學習後端呢？
 
+<!-- more -->
+
 ### About this Bootcamp
 前陣子發現了 RisingStack 提供給給 newcomer 的 [bootcamp](https://github.com/RisingStack/risingstack-bootcamp)。相信平常有在看 Nodejs 技術文章的人應該對 RisingStack 不陌生，許多文章也都蠻值得一看。而他們主要是從事 consulting 的服務，包括 fullstack development 到 devop, SRE 應有竟有。而這個 bootcamp 也是協助 newcomer 更系統性的學習 Nodejs，這裡剛好有篇內部工程師分享一些完成 bootcamp 之後的[心得](https://blog.risingstack.com/node-js-bootcamp/)。
 

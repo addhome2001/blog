@@ -13,6 +13,8 @@ tags:
 
 在一開始前作者就有提到，最好的 Sign-In 就是不要有 Sign-In，這邊大意其實是在加入會員系統之前應該要先思考一下到底有沒有這個需要，例如只是單純的 Blog 加入會員系統可能就沒這麼必要。就來讓我們來看一下作者分享了哪些 tip 吧。
 
+<!-- more -->
+
 ### HTML
 <img width="80%" alt="Use form" src="/images/bestPracticeFormSignin/use-form.jpg">
 
