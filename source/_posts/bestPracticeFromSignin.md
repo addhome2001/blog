@@ -16,8 +16,6 @@ tags:
 <!-- more -->
 
 ### HTML
-<img width="80%" alt="Use form" src="/images/bestPracticeFormSignin/use-form.jpg">
-
 * 盡可能使用最原始的 `<form/>` 來製作表單而不是其他 HTML tag (e.g., `<div/>`)。這樣除了具備 accessability 之外也對 screen reader 比較友善。另一種情形是當使用者 disable Javascript 的情況下也能正常操作。
 
 </br>
@@ -105,5 +103,4 @@ tags:
 * 確保登入和註冊表單和品牌的的風格一致
 
 ### 總結
-<img width="80%" alt="Conclusion" src="/images/bestPracticeFormSignin/conclusion.jpg">
 最後有提到，雖然有很多工具能夠幫我們，但最重要的還是要進行 RUM (Real user measurement) or monitoring（例如：signup/signin view）, bounce rate, web performance, interaction analytics（例如：利用 goal funnels 了解使用者在 flow 的哪個階段放棄或是做了哪些 interaction）
