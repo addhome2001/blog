@@ -26,17 +26,17 @@ jobs:
     - name: Install dependencies
       run: |
         yarn install --frozen-lockfile
-    # - name: Setup github
-    #   run: |
-    #     git config --global user.name $USER_NAME
-    #     git config --global user.email $USER_EMAIL
-    #     git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
-    - name: Deployment
+    - name: Setup github and SSH key
       env:
-        API_TOKEN_GITHUB: ${{secrets.blog_deployment_secret}}
-      with:
-        user-name: addhome2001
-        user-email: addhome2001@gmail.com
+        DEPLOY_PRI_KEY: ${{ secrets.DEPLOY_PRI }}
+      run: |
+        mkdir -p ~/.ssh/
+        echo "$DEPLOY_PRI_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        git config --global user.email "addhome2001@gmail.com"
+        git config --global user.name "addhome2001"
+    - name: Deployment
       run: |
         yarn deploy
         echo Deploy blog successfully 👻
