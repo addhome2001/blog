@@ -7,10 +7,6 @@ on:
 jobs:
   build:
     name: Build and deploy
-    # env:
-    #   SECRET: 
-    #   USER_NAME: addhome2001
-    #   USER_EMAIL: addhome2001@gmail.com
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,9 +19,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Install dependencies
+    - name: Install dependencies and submodule
       run: |
         yarn install --frozen-lockfile
+        git submodule update --init --recursive
     - name: Setup github and SSH key
       env:
         DEPLOY_PRI_KEY: ${{ secrets.DEPLOY_PRI }}
