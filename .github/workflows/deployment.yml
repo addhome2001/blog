@@ -1,15 +1,16 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
 name: Blog Deployment
 
 on:
   push:
-    branches: master
+    branches: [master]
 
 jobs:
   build:
-
+    name: Build and deploy
+    env:
+      SECRET: ${{secrets.blog_deployment_secret}}
+      USER_NAME: addhome2001
+      USER_EMAIL: addhome2001@gmail.com
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,4 +29,5 @@ jobs:
     - name: Deployment
       run: |
         yarn deploy
+        echo Deploy blog successfully 👻
       
