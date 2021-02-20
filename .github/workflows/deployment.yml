@@ -7,10 +7,10 @@ on:
 jobs:
   build:
     name: Build and deploy
-    env:
-      SECRET: ${{secrets.blog_deployment_secret}}
-      USER_NAME: addhome2001
-      USER_EMAIL: addhome2001@gmail.com
+    # env:
+    #   SECRET: 
+    #   USER_NAME: addhome2001
+    #   USER_EMAIL: addhome2001@gmail.com
     runs-on: ubuntu-latest
 
     strategy:
@@ -26,7 +26,17 @@ jobs:
     - name: Install dependencies
       run: |
         yarn install --frozen-lockfile
+    # - name: Setup github
+    #   run: |
+    #     git config --global user.name $USER_NAME
+    #     git config --global user.email $USER_EMAIL
+    #     git remote add origin https://$SECRET@github.com/$GITHUB_REPOSITORY.git
     - name: Deployment
+      env:
+        API_TOKEN_GITHUB: ${{secrets.blog_deployment_secret}}
+      with:
+        user-name: addhome2001
+        user-email: addhome2001@gmail.com
       run: |
         yarn deploy
         echo Deploy blog successfully 👻
